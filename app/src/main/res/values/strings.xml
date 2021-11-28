@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="Hello">Hello !!!</string>
+    <string name="push">Push</string>
+    <string name="new_text">New text</string>
+    <string name="random">Random</string>
 </resources>
