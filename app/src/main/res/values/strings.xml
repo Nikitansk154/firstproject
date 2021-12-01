@@ -4,4 +4,9 @@
     <string name="push">Push</string>
     <string name="new_text">New text</string>
     <string name="random">Random</string>
+    <string name="new_activity">New activity</string>
+    <string name="next_activity">next_activity</string>
+    <string name="share">share</string>
+    <string name="open">open</string>
+    <string name="it_is_my_first_application">It is my first application!</string>
 </resources>

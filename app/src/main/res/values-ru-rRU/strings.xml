@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="Hello">Привет</string>
+    <string name="push">Нажать</string>
+    <string name="new_text">Следующий текст</string>
+    <string name="random">Случайность</string>
+    <string name="new_activity">Новая активити</string>
+    <string name="next_activity">Следующая активити</string>
+    <string name="share">Поделиться</string>
+    <string name="open">Открыть</string>
+    <string name="it_is_my_first_application">Это мое первое приложение</string>
+</resources>

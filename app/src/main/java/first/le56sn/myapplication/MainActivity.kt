@@ -1,5 +1,7 @@
 package first.le56sn.myapplication
 
+import android.content.Intent
+import android.net.Uri
 import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,53 +10,36 @@ import android.widget.Button
 import android.widget.TextView
 import kotlin.random.Random
 
-const val TAG="MainActivity"
+private const val HELLO_KEY = "hello"
 
 class MainActivity : AppCompatActivity() {
 
-
+    lateinit var nextActivityButton: Button
+    lateinit var nextPageButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-    Log.d(TAG,"Буря мглою небо кроет")
-    }
+        nextActivityButton = findViewById(R.id.next_activity_button)
+        nextActivityButton.setOnClickListener {
 
-    override fun onStart() {
-        super.onStart()
-        Log.d(TAG,"Вихри снежные крутя")
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "This is my first application.")
+                type = "text/plain"
+            }
 
-    }
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
+        }
+        nextPageButton=findViewById(R.id.next_page_button)
+        nextPageButton.setOnClickListener {
+            val googlelink=Uri.parse("https://google.com")
+            val openBrowserIntent=Intent(Intent.ACTION_VIEW,googlelink)
+            startActivity(openBrowserIntent)
+        }
 
-    override fun onResume() {
-        super.onResume()
-        Log.d(TAG,"То, как зверь, она завоет")
-
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d(TAG,"То заплачет, как дитя")
-
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d(TAG,"То по кровле обветшалой")
-
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d(TAG,"Буря мглою небо кроет")
-
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d(TAG,"Вдруг соломой зашумит")
 
     }
 }
-
